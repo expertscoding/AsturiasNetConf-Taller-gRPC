@@ -1,0 +1,68 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29721.120
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WMTServer", "WMTServer\WMTServer.csproj", "{147BB870-AA7D-49CD-8AD2-F2B1643A177C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WMTLogger", "WMTLogger\WMTLogger.csproj", "{21EFABD7-0342-468D-BFC7-E6E988A99A91}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OidC", "OidC\OidC.csproj", "{3889C6FC-3500-43DA-8918-EA1A448CCBD4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WMTDashboard", "WMTDashboard\WMTDashboard.csproj", "{6AF55D61-5539-4AB2-961B-CCC56561C8D8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Blazor", "Blazor", "{42D1CF10-573D-4FF1-889D-A2087FBDA781}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WMTBlazor.Shared", "WMTBlazor\Shared\WMTBlazor.Shared.csproj", "{8AF1E590-C40F-42EF-8B7B-E7F4430C3B26}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WMTBlazor.Server", "WMTBlazor\Server\WMTBlazor.Server.csproj", "{7846FA67-1CEF-4D85-B77F-B891F220C3BA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WMTBlazor.Client", "WMTBlazor\Client\WMTBlazor.Client.csproj", "{064CFAA2-C87E-450A-8F03-7E6E43677F5D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{147BB870-AA7D-49CD-8AD2-F2B1643A177C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{147BB870-AA7D-49CD-8AD2-F2B1643A177C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{147BB870-AA7D-49CD-8AD2-F2B1643A177C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{147BB870-AA7D-49CD-8AD2-F2B1643A177C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21EFABD7-0342-468D-BFC7-E6E988A99A91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21EFABD7-0342-468D-BFC7-E6E988A99A91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21EFABD7-0342-468D-BFC7-E6E988A99A91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21EFABD7-0342-468D-BFC7-E6E988A99A91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3889C6FC-3500-43DA-8918-EA1A448CCBD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3889C6FC-3500-43DA-8918-EA1A448CCBD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3889C6FC-3500-43DA-8918-EA1A448CCBD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3889C6FC-3500-43DA-8918-EA1A448CCBD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AF55D61-5539-4AB2-961B-CCC56561C8D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AF55D61-5539-4AB2-961B-CCC56561C8D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AF55D61-5539-4AB2-961B-CCC56561C8D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AF55D61-5539-4AB2-961B-CCC56561C8D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AF1E590-C40F-42EF-8B7B-E7F4430C3B26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AF1E590-C40F-42EF-8B7B-E7F4430C3B26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AF1E590-C40F-42EF-8B7B-E7F4430C3B26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AF1E590-C40F-42EF-8B7B-E7F4430C3B26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7846FA67-1CEF-4D85-B77F-B891F220C3BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7846FA67-1CEF-4D85-B77F-B891F220C3BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7846FA67-1CEF-4D85-B77F-B891F220C3BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7846FA67-1CEF-4D85-B77F-B891F220C3BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{064CFAA2-C87E-450A-8F03-7E6E43677F5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{064CFAA2-C87E-450A-8F03-7E6E43677F5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{064CFAA2-C87E-450A-8F03-7E6E43677F5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{064CFAA2-C87E-450A-8F03-7E6E43677F5D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8AF1E590-C40F-42EF-8B7B-E7F4430C3B26} = {42D1CF10-573D-4FF1-889D-A2087FBDA781}
+		{7846FA67-1CEF-4D85-B77F-B891F220C3BA} = {42D1CF10-573D-4FF1-889D-A2087FBDA781}
+		{064CFAA2-C87E-450A-8F03-7E6E43677F5D} = {42D1CF10-573D-4FF1-889D-A2087FBDA781}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2965D217-6F0B-45C5-87DB-0E71E0DF0BDD}
+	EndGlobalSection
+EndGlobal

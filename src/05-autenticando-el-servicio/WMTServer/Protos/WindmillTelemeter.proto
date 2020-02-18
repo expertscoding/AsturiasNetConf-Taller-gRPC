@@ -1,0 +1,34 @@
+syntax = "proto3";
+import "Enums.proto";
+
+option csharp_namespace = "WMTServer";
+
+package Windmill;
+
+// The service definition.
+service WindmillTelemeter {
+  // Sends Telemetry.
+  rpc RequestTelemetry (WindmillInfoRequest) returns (WindmillTelemetryResponse);
+  rpc RequestTelemetryStream (WindmillInfoRequest) returns (stream WindmillTelemetryResponse);
+}
+
+message WindmillInfoRequest {
+  string WindmillId = 1;
+}
+
+// The response message containing actual values about the windmill.
+message WindmillTelemetryResponse {
+	string WindmillId = 1;
+
+	string EventTime = 2;
+
+	double WindSpeed = 3;
+
+	int32 RPM = 4;
+
+	Windmill.WindDirection WindDirection = 5;
+
+	double PowerOutput = 6;
+
+	double VoltageOutput = 7;
+}

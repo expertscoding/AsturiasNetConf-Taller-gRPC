@@ -1,0 +1,54 @@
+﻿@page "/fetchdata"
+@using WMTServer
+@inject WindmillFarm.WindmillFarmClient client
+@inject Sotsera.Blazor.Oidc.IUserManager UserManager
+
+@if (windmillData == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <div class="text-center">
+        <h1 class="display-4">Windmill Farm Dashboard</h1>
+        <p>Windmills in the farm:</p>
+    </div>
+    <div>
+        <table class="table  table-striped">
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th class="text-center" scope="col" colspan="2">Average Power</th>
+                </tr>
+                <tr>
+                    <th scope="col">Windmill Id</th>
+                    <th class="text-center" scope="col">Last minute</th>
+                    <th class="text-center" scope="col">Last hour</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var windmill in windmillData)
+                {
+                    <tr>
+                        <th scope="row">@windmill.WindmillId</th>
+                        <td class="text-center">@windmill.AvgPowerGeneratedLastMinute.ToString("F") W/h</td>
+                        <td class="text-center">@windmill.AvgPowerGeneratedLastHour.ToString("F") W/h</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
+@code {
+    private List<WindmillInfo> windmillData;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var authHeader = new Grpc.Core.Metadata { {"Authorization", "Bearer " + UserManager.UserState.AccessToken} };
+
+        var response = await client.RequestListAsync(new WindmillListRequest(), authHeader);
+
+        windmillData = response.Windmills.ToList();
+    }
+}
