@@ -14,7 +14,7 @@ Ve abriendo una línea de comandos en el directorio `cmd`
 Nuestro cliente GO necesitará que le indiquemos explicitamente el certificado que usa el servidor para exponer el servicio. En net core todo es trasnparente para nosotros puesto que se usan certificados autogenerados que el propio VS o el ejecutable dotnet instalan directamente en el almacen apropiado.  
 Para extraer este certificado te propongo los giguientes comandos ejecutados en la carpeta `cmd`  
 `dotnet dev-certs https -ep .\ca.der` ➡ para extraer el certificado en formato DER  
-`openssl x509 -inform der -in dotnet-ca.cer -outform PEM -out ca.cer` ➡ para convertirlo a Base64  
+`openssl x509 -inform der -in ca.der -outform PEM -out ca.cer` ➡ para convertirlo a Base64  
 Si no tienes instalado openssl también puedes abrir la consola de certificados en Windows y exportar el certificado desde ahí.
 
 Ahora sí, comencemos creando nuestro cliente a partir de los proto que ya tenemos generados (en este caso usaremos los de la carpeta `final`). Desde la línea de comandos ejecuta lo siguiente:  
