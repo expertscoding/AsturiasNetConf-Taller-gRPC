@@ -52,6 +52,11 @@ namespace WMTServer
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors(config =>
+            {
+                config.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
+            });
+
             app.UseRouting();
 
             app.UseGrpcWeb();

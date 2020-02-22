@@ -128,6 +128,11 @@ message WindmillTelemetryResponse {
 
 Para los tres archivos creados en la carpeta Protos debemos modificar sus propiedades para establecer _Build Action_ a _Protobuf compiler_ y _gRPC Stub Classes_ en _Server only_.
 
+>Para que la importación entre archivos funcione correctamente es necesario editar el archivo de proyecto manualmente para añadir la propiedad AdditionalImportDirs a los dos servicios proto, quedarían tal que así:  
+`<Protobuf Include="Protos\WindmillFarm.proto" GrpcServices="Server" AdditionalImportDirs="Protos\" />`  
+`<Protobuf Include="Protos\WindmillTelemeter.proto" GrpcServices="Server" AdditionalImportDirs="Protos\" />`  
+de lo contrario al compilar obtendremos un bonito error diciendo: _Import "Enums.proto" was not found or had errors._  
+
 Para darle un poco de funcionalidad al servicio hay algo de _fontanería_ para generar datos. Si sigues incrementando el proyecto base, copia entonces los ficheros de `src/02-creando-servicio-grpc/WMTServer/Mock` a la misma carpeta en nuestro servidor.
 
 Además tenenemos que crear los servicios que vamos a exponer, para lo que generaremos un par de clases que heredarán del código autogenerado desde la definición de los protos. Borra de la carpeta Services el archivo GreeterService.cs.  
